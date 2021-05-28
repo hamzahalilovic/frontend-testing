@@ -6,8 +6,10 @@ import { ThemeProvider } from "@blend-ui/core";
 
 //import { PrifinaProvider } from "@prifina/hooks";
 
-const themeProviderDecorator = (story) => (
-  <ThemeProvider mobileApp={false}>{story()}</ThemeProvider>
+const themeProviderDecorator = story => (
+  <ThemeProvider mobileApp={false}>
+    <div style={{ display: "flex", justifyContent: "center" }}>{story()}</div>
+  </ThemeProvider>
 );
 //<React.Fragment>{story()}</React.Fragment>
 addDecorator(themeProviderDecorator);

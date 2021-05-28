@@ -102,8 +102,8 @@ export const ForgotPassword = props => {
   //----------------USERNAME------------------------------
 
   const userNameAlert = (userError, userMsg) => {
-    if (userError && !alerts.check().some(alert => alert.message === userMsg))
-      alerts.error(userMsg, {});
+    // if (userError && !alerts.check().some(alert => alert.message === userMsg))
+    //   alerts.error(userMsg, {});
 
     setState({ username: { ...state.username, status: userError } });
   };
@@ -260,11 +260,11 @@ export const ForgotPassword = props => {
             progress={stepProgress}
           >
             <Box mt={20}>
-              <Text fontSize={12} textAlign={"center"}>
+              <Text fontSize={16} textAlign={"center"}>
                 {i18n.__("resetPasswordText")}
               </Text>
             </Box>
-            <Box mt={55}>
+            <Box mt={62}>
               <IconField>
                 <IconField.LeftIcon
                   iconify={bxUser}
@@ -292,7 +292,7 @@ export const ForgotPassword = props => {
             </Box>
             <Flex mt={28} justifyContent={"center"}>
               <Text textAlign={"center"} fontSize={10}>
-                {i18n.__("forgotUsername")}
+                {i18n.__("forgotUsername2")}
               </Text>
               <Button variation={"link"} size="xs" paddingLeft={5}>
                 {i18n.__("sendAgainLinkText")}
@@ -335,16 +335,16 @@ export const ForgotPassword = props => {
             minHeight={406}
           >
             <Box mt={70}>
-              <Text fontSize={12} textAlign={"center"}>
+              <Text fontSize={16} textAlign={"center"}>
                 {i18n.__("sentCodeText")}
               </Text>
             </Box>
-            <Flex mt={62} justifyContent={"center"}>
+            <Flex mt={66} justifyContent={"center"}>
               <Text textAlign={"center"} fontSize={10}>
-                {i18n.__("codeMissing")}
+                {i18n.__("codeMissing2")}
               </Text>
               <Button variation="link" size="xs" paddingLeft={5}>
-                {i18n.__("sendAgainLinkText")}
+                {i18n.__("sendAgainLinkText2")}
               </Button>
             </Flex>
             <Box mt={45} display={"inline-flex"}>
@@ -377,15 +377,15 @@ export const ForgotPassword = props => {
             title={i18n.__("resetPasswordTitle")}
             progress={50}
             pr={19}
-            minHeight={526}
+            minHeight={580}
             progress={stepProgress}
           >
             <Box mt={20}>
-              <Text fontSize={12} textAlign={"center"}>
+              <Text fontSize={16} textAlign={"center"}>
                 {i18n.__("resetPasswordText2")}
               </Text>
             </Box>
-            <Box mt={45}>
+            <Box mt={52}>
               <IconField>
                 <IconField.LeftIcon
                   iconify={bxUser}
@@ -509,7 +509,7 @@ export const ForgotPassword = props => {
                 tabIndex="4"
               />
             </Box>
-            <Box mt={45} display="flex" justifyContent="center">
+            <Box mt={37} display="flex" justifyContent="center">
               <Button
                 // disabled={
                 //   inputError.status ||
@@ -539,7 +539,7 @@ export const ForgotPassword = props => {
             progress={stepProgress}
           >
             <Box mt={20}>
-              <Text fontSize={12} textAlign="center">
+              <Text fontSize={16} textAlign="center">
                 {i18n.__("resetPasswordText3")}
               </Text>
             </Box>

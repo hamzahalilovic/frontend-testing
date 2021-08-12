@@ -471,7 +471,7 @@ export const AppMarket = ({ GraphQLClient, prifinaID, ...props }) => {
   return (
     <>
       {step === 0 && (
-        <>
+        <Box>
           <GlobalStyle />
           <Navbar />
           <UserMenu
@@ -566,7 +566,7 @@ export const AppMarket = ({ GraphQLClient, prifinaID, ...props }) => {
               </Flex>
             </Box>
           </Flex>
-        </>
+        </Box>
       )}
       {step === 1 && (
         <ThemeProvider>
